@@ -210,6 +210,15 @@ GROUP BY payment_type, DATE_TRUNC('month', tpep_pickup_datetime)
 - For single-node analytical tasks or use cases with limited computational resources, DuckDB is the clear winner.
 - For distributed processing or scenarios where memory constraints outweigh CPU efficiency, Spark may still be preferred despite slower query times.
 
+
+## Visual Comparisons
+### Performance Comparison
+![Performance Comparison](performance_comparison.png)
+
+### Resource Usage
+![Resource Usage Comparison](resource_comparison.png)
+
+
 ## Summary
 DuckDB outperforms Spark in query execution times across all query types, with an average speed advantage of 1.38x. 
 It excels particularly in simple aggregation tasks, where it is 1.75x faster than Spark. 
@@ -221,13 +230,6 @@ Despite its strengths, DuckDB faces limitations in Iceberg table handling, parti
 To address this, you developed a custom function that determines the latest metadata version directly, 
 enabling seamless integration with Iceberg. This workaround resolves a critical issue even when using the latest DuckDB version and aligns with your contribution to [GitHub Issue #21](https://github.com/duckdb/duckdb-iceberg/issues/21). 
 While DuckDB's speed and CPU efficiency make it a strong choice for local analytics, improving its Iceberg compatibility would enhance its applicability in broader data processing workflows.
-
-## Visual Comparisons
-### Performance Comparison
-![Performance Comparison](performance_comparison.png)
-
-### Resource Usage
-![Resource Usage Comparison](resource_comparison.png)
 
 ## Resources
 - Complete benchmark code available in repository
