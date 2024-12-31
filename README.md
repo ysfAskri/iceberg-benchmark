@@ -227,8 +227,8 @@ its memory usage is double that of Spark (296 MB vs. 147 MB).
 These differences make DuckDB ideal for single-node analytical tasks with limited computational resources, 
 while Spark remains suitable for distributed environments or memory-sensitive workloads. 
 Despite its strengths, DuckDB faces limitations in Iceberg table handling, particularly in locating the `version-hint.txt` file. 
-To address this, you developed a custom function that determines the latest metadata version directly, 
-enabling seamless integration with Iceberg. This workaround resolves a critical issue even when using the latest DuckDB version and aligns with your contribution to [GitHub Issue #21](https://github.com/duckdb/duckdb-iceberg/issues/21). 
+To address this, i developed a custom function that determines the latest metadata version directly, 
+enabling seamless integration with Iceberg. This workaround resolves a critical issue even when using the latest DuckDB version ( [GitHub Issue #21](https://github.com/duckdb/duckdb-iceberg/issues/21) ). 
 While DuckDB's speed and CPU efficiency make it a strong choice for local analytics, improving its Iceberg compatibility would enhance its applicability in broader data processing workflows.
 
 ## Resources
